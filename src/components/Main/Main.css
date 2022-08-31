@@ -1,0 +1,122 @@
+.dark-mode {
+  color: hsl(0, 0%, 100%) !important;
+  background-color: hsl(207, 26%, 17%) !important;
+}
+.light-mode {
+  color: black;
+  background-color: hsl(0, 0%, 98%);
+}
+.header-container {
+  box-shadow: 0px 0px 12px 0px #0000004d;
+}
+.search-input {
+  border-radius: 5px;
+  width: 400px;
+  height: 50px;
+}
+.filter-bar {
+  width: 180px;
+}
+.filter-bar:hover .dropdown-menu {
+  max-height: 300px;
+  padding: 0.5rem 1rem;
+}
+.arror-icon {
+  transition: 0.3s;
+}
+.filter-bar:hover .arror-icon {
+  transform: rotate(0deg);
+}
+.dropdown-menu {
+  transition: 0.3s;
+  width: 100%;
+  max-height: 0px;
+  background-color: white;
+  border-radius: 5px;
+}
+.dropdown-menu > p {
+  position: relative;
+  padding: 0.3rem;
+  font-weight: 600;
+  transition: 0.3s;
+  width: 100%;
+}
+.dropdown-menu > p::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  bottom: 5px;
+  border-bottom: 1px solid #1ab5e3;
+  transition: 0.3s;
+}
+.dropdown-menu > p:hover::before {
+  padding: 0.25rem 0.7rem;
+  width: 100%;
+}
+.country-data {
+  width: 300px;
+  height: 370px;
+  cursor: pointer;
+}
+.country-data > img {
+  height: 200px;
+  width: 100%;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.countries-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px 15px;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgb(22, 22, 22);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(27, 27, 27) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.error-btn {
+  width: auto;
+  height: 80px;
+  background-color: #ff3636;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px 1px #ef0000;
+  margin: auto;
+}
+@media screen and (max-width: 640px) {
+  .search-input {
+    width: auto;
+  }
+}
