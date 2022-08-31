@@ -10,8 +10,11 @@ root.render(
   <RecoilRoot>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/country-info/:name" element={<MainInfo />} />
+        <Route exact path="/react-rest-countries" element={<App />} />
+        <Route
+          path="/react-rest-countries/country-info/:name"
+          element={<MainInfo />}
+        />
       </Routes>
     </BrowserRouter>
   </RecoilRoot>
